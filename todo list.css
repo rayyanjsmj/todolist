@@ -1,0 +1,135 @@
+/* ===== BODY ===== */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    padding:40px;
+}
+
+/* ===== INPUTS ===== */
+input{
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    margin-right:10px;
+    background: rgba(255,255,255,0.2);
+    color:white;
+}
+
+input::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+/* ===== BUTTONS ===== */
+button{
+    padding:8px 14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.8;
+    transform:scale(1.05);
+}
+
+.add-btn{
+    background:red;
+    color:white;
+}
+
+.delete-btn{
+    background:red;
+    color:white;
+}
+
+.done-btn{
+    background:orange;
+    color:white;
+}
+
+/* ===== FOLDER CARD ===== */
+.folder-card{
+    border-radius:20px;
+    padding:20px;
+    margin:20px 0;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ===== TASK LIST ===== */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    background: rgba(255,255,255,0.15);
+    padding:10px;
+    margin:8px 0;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border:1px solid rgba(255,255,255,0.4); /* sharp border */
+}
+
+li span{
+    transition:0.3s;
+}
+
+.done{
+    text-decoration: line-through;
+    opacity:0.6;
+}
+
+/* ===== TITLE ===== */
+h2, h3{
+    margin-bottom:15px;
+}
+/* ===== BUTTONS ===== */
+button{
+    padding:8px 14px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s ease;
+    position:relative;
+    overflow:hidden;
+    font-weight:bold;
+}
+
+/* ===== HOVER EFFECT (MAGIC) ===== */
+button::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.5),
+        transparent
+    );
+    transition:0.5s;
+}
+
+button:hover::after{
+    left:100%;
+}
+
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px rgba(255,255,255,0.6);
+    filter:brightness(1.2);
+}
